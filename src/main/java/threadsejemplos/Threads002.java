@@ -32,11 +32,12 @@ public class Threads002 extends Thread {
     @Override
     public void run () {
         for (int k = 1; k <= numero; k++) {
-            System.out.println(k + " " + this.getName() + " Prioridad: " + this.getPriority() + " Info: " + this.toString());
-            System.out.println("Numero de hilos activos: " + this.activeCount());
-            System.out.println("Estado del hilo: "  + this.getState());
+            
             try {
-                this.sleep(1000);
+                System.out.println(k + " " + this.getName() + " Prioridad: " + this.getPriority() + " Info: " + this.toString());
+                System.out.println("Numero de hilos activos: " + this.activeCount());
+                System.out.println("Estado del hilo: "  + this.getState());
+                this.sleep(10000);
             } catch (InterruptedException ex) {
                 Logger.getLogger(Threads002.class.getName()).log(Level.SEVERE, null, ex);
             }
