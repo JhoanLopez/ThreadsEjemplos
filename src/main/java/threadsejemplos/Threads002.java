@@ -26,7 +26,13 @@ public class Threads002 extends Thread {
         threads03.setName("Hilo 03");
         threads01.start();
         threads02.start();
-        threads03.start();   
+        threads03.start(); 
+        
+        // Se utiliza el método wait() para que el hilo espere a que otro hiilo envie un notify() o notifyAll()
+        //threads01.wait();
+        
+        // Cuando se envia un notify() o notifyAll() se reanudan los hilos que están a la espera
+        //threads01.notifyAll();   
     }
     
     @Override
